@@ -7,7 +7,7 @@ import DitherVeil from './components/DitherVeil.jsx';
 import { makeCardImage } from './components/makeCardImage.js';
 import './portfolio.css';
 
-const asset = path => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+const asset = path => new URL(`${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`, window.location.href).href;
 
 const projects = [
   {
